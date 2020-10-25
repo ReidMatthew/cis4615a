@@ -4,11 +4,18 @@
 public class R01_DCL00_J {
 
     public static void main(String[] args) {
+      boolean validFlag = false;
+      do {
         try {
-            //...
-          } catch (IOException ioe) {
-            ioe.printStackTrace();
-          }
+          // ...
+          // If requested file does not exist, throws FileNotFoundException
+          // If requested file exists, sets validFlag to true
+          validFlag = true;
+        } catch (FileNotFoundException e) {
+          // Ask the user for a different file name
+        }
+      } while (validFlag != true);
+      // Use the file
     }
 
 }
